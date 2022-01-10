@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: uol-library/uol-jekyll-netlify
+  repo: peteredwards/uol-jekyll-netlify
   branch: main
   site_domain: silly-fermat-52243b.netlify.com
 
