@@ -20,18 +20,66 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown"} 
-  - name: 'mainmenu'
-    label: 'Main Menu'
+  - name: 'navigation'
+    label: 'Navigation'
     editor:
       preview: false
     files:
-      - label: 'Main Menu'
+      - label: 'Navigation'
         name: 'mainmenu'
-        file: '_data/mainmenu.yml'
+        file: '_data/navigation.yml'
         fields:
-          - label: 'Navigation Items'
-            name: 'items'
+          - label: 'Main menu'
+            name: 'mainmenu'
             widget: 'list'
             fields:
-              - { label: Name, name: title, widget: string }
-              - { label: Link, name: url, widget: string }
+              - label: 'Name'
+                name: 'title'
+                widget: 'string'
+              - label: 'Link'
+                name: 'url'
+                widget: 'string'
+              - label: 'Subhmenu'
+                name: 'items'
+                widget: 'list'
+                fields:
+                  - label: 'Name'
+                    name: 'title'
+                    widget: 'string'
+                  - label: 'Link'
+                    name: 'url'
+                    widget: 'string'
+          - label: 'Quick Links'
+            name: 'quicklinks'
+            widget: 'list'
+            fields:
+              - label: 'Name'
+                name: 'title'
+                widget: 'string'
+              - label: 'Items'
+                name: 'items'
+                widget: 'list'
+                fields:
+                  - label: 'Name'
+                    name: 'title'
+                    widget: 'string'
+                  - label: 'Link'
+                    name: 'url'
+                    widget: 'string'
+          - label: 'Footer menus'
+            name: 'footermenu'
+            widget: 'list'
+            fields:
+              - label: 'Name'
+                name: 'title'
+                widget: 'string'
+              - label: 'Items'
+                name: 'items'
+                widget: 'list'
+                fields:
+                  - label: 'Name'
+                    name: 'title'
+                    widget: 'string'
+                  - label: 'Link'
+                    name: 'url'
+                    widget: 'string'
