@@ -25,8 +25,8 @@ collections:
     editor:
       preview: false
     files:
-      - label: 'Navigation'
-        name: 'mainmenu'
+      - label: 'Menus'
+        name: 'menus'
         file: '_data/navigation.yml'
         fields:
           - label: 'Main menu items'
@@ -86,3 +86,36 @@ collections:
                   - label: 'Link'
                     name: 'url'
                     widget: 'string'
+      - label: 'Section sidebar'
+        name: 'sectionmenu'
+        file: '_data/sidebars.yml'
+        fields:
+          - label: 'Section sidebar menus'
+            name: 'sectionmenus'
+            widget: 'list'
+            fields:
+              - label: 'Title'
+                name: 'title'
+                widget: 'string'
+              - label: 'Menu Items'
+                name: 'items'
+                widget: 'list'
+                fields:
+                  - label: 'Title'
+                    name: 'title'
+                    widget: 'string'
+                  - label: 'Link'
+                    name: 'url'
+                    widget: 'string'
+                    hint: 'If you add a submenu, the link for this item will be ignored (it will open the submenu)'
+                  - label: 'Submenu items'
+                    name: 'items'
+                    widget: 'list'
+                    fields:
+                      - label: 'Title'
+                        name: 'title'
+                        widget: 'string'
+                      - label: 'Link'
+                        name: 'url'
+                        widget: 'string'
+
