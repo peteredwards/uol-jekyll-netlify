@@ -32,6 +32,9 @@ collections:
           - label: 'Main menu items'
             name: 'mainmenu'
             widget: 'list'
+            summary: '{{fields.title}}'
+            label_singular: 'Add menu item'
+            hint: 'This is the main menu which is above the content area of each page on the site'
             fields:
               - label: 'Title'
                 name: 'title'
@@ -43,6 +46,8 @@ collections:
               - label: 'Submenu items'
                 name: 'items'
                 widget: 'list'
+                summary: '{{fields.title}}'
+                label_singular: 'Add submenu item'
                 fields:
                   - label: 'Title'
                     name: 'title'
@@ -53,6 +58,9 @@ collections:
           - label: 'Quick Links'
             name: 'quicklinks'
             widget: 'list'
+            max: 3
+            label_singular: 'Add quicklinks menu'
+            hint: 'Quicklinks are placed in the black header at the top of every page. You can add up to <strong>three</strong> menus here'
             fields:
               - label: 'Name'
                 name: 'title'
@@ -60,6 +68,8 @@ collections:
               - label: 'Items'
                 name: 'items'
                 widget: 'list'
+                summary: '{{fields.title}}'
+                label_singular: 'Add menu item'
                 fields:
                   - label: 'Name'
                     name: 'title'
@@ -71,7 +81,9 @@ collections:
             name: 'footermenu'
             widget: 'list'
             max: 3
-            hint: 'You can add up to <strong>three</strong> Menus here'
+            label_singular: 'Add footer menu'
+            summary: '{{fields.title}}'
+            hint: 'You can add up to <strong>three</strong> footer menus here'
             fields:
               - label: 'Menu Title'
                 name: 'title'
@@ -79,6 +91,8 @@ collections:
               - label: 'Items'
                 name: 'items'
                 widget: 'list'
+                summary: '{{fields.title}}'
+                label_singular: 'Add menu item'
                 fields:
                   - label: 'Title'
                     name: 'title'
@@ -86,6 +100,24 @@ collections:
                   - label: 'Link'
                     name: 'url'
                     widget: 'string'
+          - label: 'Footer links'
+            name: 'footerinfo'
+            widget: 'list'
+            max: 6
+            label_singular: 'Add footer link'
+            summary: '{{fields.title}}'
+            hint: 'You can add up to <strong>six</strong> links here, including links to FOI, your Privacy page, and your Accessibility page'
+            default:
+              - { title: 'Freedom of information', url: 'https://leeds.ac.uk/freedom-of-information' }
+              - { title: 'Privacy', url: '/privacy/' }
+              - { title: 'Accessibility', url: '/accessibility/' }
+            fields:
+              - label: 'Title'
+                name: 'title'
+                widget: 'string'
+              - label: 'Link'
+                name: 'url'
+                widget: 'string'
       - label: 'Section sidebar'
         name: 'sectionmenu'
         file: '_data/sidebars.yml'
@@ -93,13 +125,18 @@ collections:
           - label: 'Section sidebar menus'
             name: 'sectionmenus'
             widget: 'list'
+            label_singular: 'Add menu'
+            hint: 'The section sidebar menus are located to the left of content on larger screens and form a dropdown on smaller screens. Each section has an ID which can be referenced in pages to include the relevant menu.'
+            summary: '{{fields.sectionid}}'
             fields:
-              - label: 'Title'
-                name: 'title'
+              - label: 'Section ID'
+                name: 'sectionid'
                 widget: 'string'
               - label: 'Menu Items'
                 name: 'items'
                 widget: 'list'
+                summary: '{{fields.title}}'
+                label_singular: 'Add menu item'
                 fields:
                   - label: 'Title'
                     name: 'title'
@@ -108,9 +145,11 @@ collections:
                     name: 'url'
                     widget: 'string'
                     hint: 'If you add a submenu, the link for this item will be ignored (it will open the submenu)'
-                  - label: 'Submenu items'
+                  - label: 'Submenu'
                     name: 'items'
                     widget: 'list'
+                    summary: '{{fields.title}}'
+                    label_singular: 'Add submenu item'
                     fields:
                       - label: 'Title'
                         name: 'title'
@@ -118,4 +157,18 @@ collections:
                       - label: 'Link'
                         name: 'url'
                         widget: 'string'
+              - label: 'Calls to action'
+                name: 'ctas'
+                widget: 'list'
+                summary: '{{fields.title}}'
+                label_singular: 'Add CTA'
+                hint: 'These are located under the section menu to the left of content on larger screens and under the page content on smaller screens.'
+                max: 2
+                fields:
+                  - label: 'Title'
+                    name: 'title'
+                    widget: 'string'
+                  - label: 'Link'
+                    name: 'url'
+                    widget: 'string'
 
