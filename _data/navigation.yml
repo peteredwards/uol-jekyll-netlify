@@ -3,3 +3,34 @@ mainmenu:
     url: /bastard/
   - title: Fucker
     url: /twat/
+quicklinks:
+  - title: QL1
+    items:
+      - title: Bastard
+        url: /shit/
+      - title: Twat
+        url: /fucker/
+  - title: QL2
+    items:
+      - title: Shit
+        url: /bastard/
+      - title: Fucker
+        url: /twat/
+footermenu:
+  - title: Footer1
+    items:
+      - title: Shit
+        url: /fucker/
+      - title: Bastard
+        url: /twat/
+  - title: footer2
+    items:
+      - title: Fucker
+        url: /shit/
+      - title: Twat
+        url: /bastard/
+footerinfo:
+  - title: Bastard
+    url: /shit/
+  - title: Twat
+    url: /fucker/
