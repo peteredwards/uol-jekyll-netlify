@@ -1,25 +1,150 @@
 backend:
-  name: github
-  repo: peteredwards/uol-jekyll-netlify
-  branch: main
-  site_domain: silly-fermat-52243b.netlify.com
+  name: 'github'
+  repo: 'peteredwards/uol-jekyll-netlify'
+  branch: 'main'
+  site_domain: 'silly-fermat-52243b.netlify.com'
 
-media_folder: "uploads"
+media_folder: 'uploads'
 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "_posts/" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  - name: 'landing'
+    label: 'Landing Pages'
+    folder: 'pages/'
+    filter: {field: 'layout', value: 'home'}
+    create: true
+    preview: false
+    slug: '{{slug}}'
+    fields:
+      - label: 'Layout'
+        name: 'layout'
+        widget: 'hidden'
+        default: 'home'
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
+      - label: 'Index'
+        name: 'index'
+        widget: 'boolean'
+        default: true
+      - label: 'URL'
+        name: 'permalink'
+        widget: 'string'
+        pattern: ['[a-z\-0-9\/]+', 'Please use lower case letters, hyphens and forward slashes only']
+      - label: 'Banner'
+        name: 'Banner'
+        widget: 'list'
+        summary: '{{fields.title}}'
+        label_singular: 'banner iamge'
+        collapsed: true
+        fields:
+          - label: 'Image'
+            name: 'imageurl'
+            widget: 'Image'
+            allow_multiple: false
+            choose_url: false
+          - label: 'Title'
+            name: 'title'
+            widget: 'string'
+          - label: 'Alternate text'
+            name: 'imagealt'
+            widget: 'string'
+          - label: 'Text'
+            name: 'text'
+            widget: 'string'
+            required: false
+          - label: 'Link URL'
+            name: 'link'
+            widget: 'string'
+          - label: 'Link text'
+            name: 'linktext'
+            widget: 'string'
+      - label: 'Body'
+        name: 'body'
+        widget: 'markdown'
+  - name: 'pages'
+    label: 'Regular Pages'
+    folder: 'pages/'
+    filter: {field: 'layout', value: 'page'}
+    create: true
+    preview: false
+    slug: '{{sectionid}}-{{slug}}'
+    fields:
+      - label: 'Layout'
+        name: 'layout'
+        widget: 'hidden'
+        default: 'home'
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
+      - label: 'Index'
+        name: 'index'
+        widget: 'boolean'
+        default: true
+      - label: 'URL'
+        name: 'permalink'
+        widget: 'string'
+        pattern: ['[a-z\-0-9\/]+', 'Please use lower case letters, hyphens and forward slashes only']
+      - label: 'Section ID'
+        name: 'sectionid'
+        widget: 'relation'
+        collection: 'navigation'
+        file: '_data/sidebars.yml'
+        value_field: 'sectionmenus.*.sectionid'
+      - label: 'Banner'
+        name: 'Banner'
+        widget: 'list'
+        summary: '{{fields.title}}'
+        label_singular: 'banner iamge'
+        collapsed: true
+        fields:
+          - label: 'Image'
+            name: 'imageurl'
+            widget: 'Image'
+            allow_multiple: false
+            choose_url: false
+          - label: 'Title'
+            name: 'title'
+            widget: 'string'
+          - label: 'Alternate text'
+            name: 'imagealt'
+            widget: 'string'
+          - label: 'Text'
+            name: 'text'
+            widget: 'string'
+            required: false
+          - label: 'Link URL'
+            name: 'link'
+            widget: 'string'
+          - label: 'Link text'
+            name: 'linktext'
+            widget: 'string'
+      - label: 'Body'
+        name: 'body'
+        widget: 'markdown'
+  - name: 'blog'
+    label: 'Blog'
+    folder: '_posts/'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
-      preview: false # preview pane doesn't understand Liquid(!)
-    fields: # The fields for each document, usually in front matter
-      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Body", name: "body", widget: "markdown"} 
+      preview: false
+    fields:
+      - label: 'Layout'
+        name: 'layout'
+        widget: 'hidden'
+        default: 'post'
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
+      - label: 'Publish Date'
+        name: 'date'
+        widget: 'datetime'
+      - label: 'Tags'
+        name: 'tags'
+        widget: 'list'
+      - label: 'Body'
+        name: 'body'
+        widget: 'markdown' 
   - name: 'navigation'
     label: 'Navigation'
     editor:
@@ -57,6 +182,11 @@ collections:
                   - label: 'Link'
                     name: 'url'
                     widget: 'string'
+                  - label: 'Call to action?'
+                    name: 'cta'
+                    widget: 'boolean'
+                    default: false
+                    hint: 'These items will have special formatting applied to them and should always be at the bottom of the submenu'
           - label: 'Quick Links'
             name: 'quicklinks'
             widget: 'list'
@@ -131,7 +261,7 @@ collections:
           - label: 'Section sidebar menus'
             name: 'sectionmenus'
             widget: 'list'
-            label_singular: 'Add menu'
+            label_singular: 'sidebar menu'
             hint: 'The section sidebar menus are located to the left of content on larger screens and form a dropdown on smaller screens. Each section has an ID which can be referenced in pages to include the relevant menu.'
             collapsed: true
             summary: '{{fields.sectionid}}'
