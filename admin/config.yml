@@ -90,7 +90,7 @@ collections:
         collection: 'navigation'
         file: '_data/sidebars.yml'
         value_field: 'sectionmenus.*.sectionid'
-        search_fields: 'sectionmenus.*.sectionid'
+        search_fields: ['sectionmenus.*.sectionid']
       - label: 'Banner'
         name: 'Banner'
         widget: 'list'
