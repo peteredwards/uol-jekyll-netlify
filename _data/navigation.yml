@@ -3,6 +3,9 @@ mainmenu:
     url: /bastard/
   - title: Fucker
     url: /twat/
+    items:
+      - title: Subfucker
+        url: /fuckingtwat/
 quicklinks:
   - title: QL1
     items:
