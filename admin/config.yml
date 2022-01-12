@@ -40,8 +40,10 @@ collections:
           - label: 'Image'
             name: 'imageurl'
             widget: 'Image'
-            allow_multiple: false
             choose_url: false
+            maedia_library:
+              config:
+                multiple: false
           - label: 'Title'
             name: 'title'
             widget: 'string'
@@ -100,9 +102,11 @@ collections:
         fields:
           - label: 'Image'
             name: 'imageurl'
-            widget: 'Image'
-            allow_multiple: false
+            widget: 'image'
             choose_url: false
+            maedia_library:
+              config:
+                multiple: false
           - label: 'Title'
             name: 'title'
             widget: 'string'
