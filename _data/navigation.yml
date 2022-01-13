@@ -1,39 +1,145 @@
 mainmenu:
-  - title: Shit
-    url: /bastard/
-  - title: Fucker
-    url: /twat/
+  - title: "Study"
     items:
-      - title: Subfucker
-        url: /fuckingtwat/
+      - title: "Undergraduate"
+        url: "/examples/"
+      - title: "Masters courses"
+        url: "/examples/"
+      - title: "Research degrees"
+        url: "/examples/"
+      - title: "International students"
+        url: "/examples/"
+      - title: "Online courses"
+        url: "/examples/"
+      - title: "Search courses"
+        url: "/examples/"
+        cta: 1
+      - title: "Coronavirus FAQs"
+        url: "/examples/"
+        cta: 1
+      - title: "Undergraduate virtual open days"
+        url: "/examples/"
+        cta: 1
+  - title: "Research and innovation"
+    url: "/examples/"
+  - title: "Working with business"
+    url: "/examples/"
+  - title: "Global"
+    url: "/examples/"
+  - title: "Around campus"
+    url: "/examples/"
+  - title: "About"
+    url: "/examples/"
 quicklinks:
-  - title: QL1
+  - title: "Students"
     items:
-      - title: Bastard
-        url: /shit/
-      - title: Twat
-        url: /fucker/
-  - title: QL2
+      - url: "/examples/"
+        title: "Mobile App"
+      - url: "/examples/"
+        title: "Minerva"
+      - url: "/examples/"
+        title: "For Students"
+      - url: "/examples/"
+        title: "Library"
+      - url: "/examples/"
+        title: "IT"
+      - url: "/examples/"
+        title: "Campus map"
+  - title: "Staff"
     items:
-      - title: Shit
-        url: /bastard/
-      - title: Fucker
-        url: /twat/
-footermenu:
-  - title: Footer1
+      - url: "/examples/"
+        title: "For Staff"
+      - url: "/examples/"
+        title: "Services A-Z"
+      - url: "/examples/"
+        title: "Staff A-Z"
+      - url: "/examples/"
+        title: "Faculties A-Z"
+      - url: "/examples/"
+        title: "Student Education Service"
+      - url: "/examples/"
+        title: "HR"
+      - url: "/examples/"
+        title: "IT"
+      - url: "/examples/"
+        title: "Campus map"
+  - title: "Faculties"
     items:
-      - title: Shit
-        url: /fucker/
-      - title: Bastard
-        url: /twat/
-  - title: footer2
+      - url: "/examples/"
+        title: "Faculty of Arts, Humanities and Cultures"
+      - url: "/examples/"
+        title: "Faculty of Biological Sciences"
+      - url: "/examples/"
+        title: "Faculty of Business"
+      - url: "/examples/"
+        title: "Faculty of Engineering and Physical Sciences"
+      - url: "/examples/"
+        title: "Faculty of Environment"
+      - url: "/examples/"
+        title: "Faculty of Medicine and Health"
+      - url: "/examples/"
+        title: "Faculty of Social Sciences"
+footermenus: 
+  - title: "Study and Courses"
     items:
-      - title: Fucker
-        url: /shit/
-      - title: Twat
-        url: /bastard/
+      - url: "/examples/"
+        title: "Undergraduate"
+      - url: "/examples/"
+        title: "Masters courses"
+      - url: "/examples/"
+        title: "Research degrees with very long titles that wrap over two lines like this one its very very long"
+      - url: "/examples/"
+        title: "International"
+      - url: "/examples/"
+        title: "Course search"
+  - title: "About us"
+    items:
+      - url: "/examples/"
+        title: "Campus map"
+      - url: "/examples/"
+        title: "Our heritage"
+      - url: "/examples/"
+        title: "Faculties"
+      - url: "/examples/"
+        title: "Governance"
+      - url: "/examples/"
+        title: "Values and responsibility"
+      - url: "/examples/"
+        title: "Equality"
+      - url: "/examples/"
+        title: "Executive team"
+      - url: "/examples/"
+        title: "News"
+      - url: "/examples/"
+        title: "Events"
+  - title: "Quicklinks and contacts"
+    items:
+      - url: "/examples/"
+        title: "Jobs"
+      - url: "/examples/"
+        title: "Term dates"
+      - url: "/examples/"
+        title: "Services A-Z"
+      - url: "/examples/"
+        title: "Library"
+      - url: "/examples/"
+        title: "Alumni"
+      - url: "/examples/"
+        title: "Press"
+      - url: "/examples/"
+        title: "VideoLeeds"
+      - url: "/examples/"
+        title: "Staff A-Z"
+      - url: "/examples/"
+        title: "Contacts"
+      - url: "/examples/"
+        title: "Coronavirus"
 footerinfo:
-  - title: Bastard
-    url: /shit/
-  - title: Twat
-    url: /fucker/
+  - url: "/examples/"
+    title: "Terms and conditions"
+  - url: "/examples/"
+    title: "Accessibility"
+  - url: "/examples/"
+    title: "Privacy and cookies"
+  - url: "/examples/"
+    title: "Freedom of information"

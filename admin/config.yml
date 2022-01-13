@@ -1,6 +1,7 @@
 backend:
   name: 'github'
   repo: 'peteredwards/uol-jekyll-netlify'
+  publish_mode: 'editorial_workflow'
   branch: 'main'
   site_domain: 'silly-fermat-52243b.netlify.com'
 
@@ -216,7 +217,7 @@ collections:
                     name: 'url'
                     widget: 'string'
           - label: 'Footer menus'
-            name: 'footermenu'
+            name: 'footermenus'
             widget: 'list'
             max: 3
             label_singular: 'footer menu'
