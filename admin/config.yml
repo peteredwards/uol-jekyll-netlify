@@ -193,7 +193,7 @@ collections:
                     widget: 'boolean'
                     default: false
                     hint: 'These items will have special formatting applied to them and should always be at the bottom of the submenu'
-          - label: 'Quick Links'
+          - label: 'Quick Links menus'
             name: 'quicklinks'
             widget: 'list'
             max: 3
