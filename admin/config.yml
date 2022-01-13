@@ -279,7 +279,7 @@ collections:
                 name: 'items'
                 widget: 'list'
                 summary: '{{fields.title}}'
-                label_singular: 'Add menu item'
+                label_singular: 'menu item'
                 fields:
                   - label: 'Title'
                     name: 'title'
@@ -292,7 +292,7 @@ collections:
                     name: 'items'
                     widget: 'list'
                     summary: '{{fields.title}}'
-                    label_singular: 'Add submenu item'
+                    label_singular: 'submenu item'
                     collapsed: true
                     fields:
                       - label: 'Title'
@@ -305,7 +305,7 @@ collections:
                 name: 'ctas'
                 widget: 'list'
                 summary: '{{fields.title}}'
-                label_singular: 'Add CTA'
+                label_singular: 'CTA'
                 hint: 'These are located under the section menu to the left of content on larger screens and under the page content on smaller screens.'
                 max: 2
                 collapsed: true
