@@ -1,0 +1,84 @@
+{
+  "loc": {
+    "location": "{\"type\":\"Point\",\"coordinates\":[-1.5645648,53.346725]}",
+    "address": "test space address",
+    "building": "test building",
+    "floor": "test floor",
+    "campusmap_ref": "78"
+  },
+  "opening_hours": {
+    "monday": {
+      "open": true,
+      "from": "9:00",
+      "to": "17:00"
+    },
+    "tuesday": {
+      "open": true,
+      "from": "9:00",
+      "to": "17:00"
+    },
+    "wednesday": {
+      "open": true,
+      "from": "9:00",
+      "to": "17:00"
+    },
+    "thursday": {
+      "open": true,
+      "from": "9:00",
+      "to": "17:00"
+    },
+    "friday": {
+      "open": true,
+      "from": "9:00",
+      "to": "17:00"
+    },
+    "saturday": {
+      "open": false,
+      "from": "9:00",
+      "to": "17:00"
+    },
+    "sunday": {
+      "open": false,
+      "from": "9:00",
+      "to": "17:00"
+    }
+  },
+  "filters": {
+    "atmosphere": [
+      "relaxed",
+      "social"
+    ],
+    "noise": "Whispers",
+    "facilities": [
+      "daylight",
+      "individual_study_space",
+      "laptops_allowed"
+    ],
+    "work": [
+      "private",
+      "friends"
+    ]
+  },
+  "core": {
+    "id": 1,
+    "title": "test space",
+    "description": "this is a test space",
+    "space_type": "General Seating Area",
+    "slug": "test-space"
+  },
+  "access": {
+    "type": "Anyone (public)",
+    "disabled_access": true
+  },
+  "contact": {
+    "url": "https://website.url",
+    "booking_url": "https://booking.url",
+    "phone_number": "0123456789",
+    "email_address": "test@this.site"
+  },
+  "tags": [
+    "fucking",
+    "taggy",
+    "bastards"
+  ]
+}
